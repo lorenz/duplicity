@@ -66,6 +66,12 @@ from duplicity import robust
 from duplicity import tempdir
 from duplicity import util
 
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
+
 if u'--pydevd' in sys.argv or os.getenv(u'PYDEVD', None):
     import pydevd  # pylint: disable=import-error
     pydevd.settrace()
